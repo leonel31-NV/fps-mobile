@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#14171a">
+<title>Arena FPS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video id="cam" playsinline muted autoplay></video>
+<canvas id="view"></canvas>
+
+<section id="lobby">
+  <h1>Arena FPS</h1>
+  <p class="sub">Laser tag com câmera: aponte o celular para outra pessoa e atire.</p>
+  <input id="name" maxlength="12" placeholder="Seu apelido" autocomplete="off">
+  <div class="label">Sua cor: vista algo dela (camisa, boné, fita)</div>
+  <div id="colors" role="group" aria-label="Cor do jogador"></div>
+  <button id="create">Criar sala</button>
+  <div class="row"><input id="code" maxlength="5" placeholder="Código" autocomplete="off"><button id="join">Entrar</button></div>
+  <p id="msg" role="alert"></p>
+  <p class="note">A imagem da câmera é analisada no seu aparelho e nunca é enviada ao servidor. Jogue apenas com quem concordou em participar.</p>
+</section>
+
+<section id="hud" hidden>
+  <div id="roomcode"></div>
+  <ul id="board"></ul>
+  <div id="status" role="status"></div>
+  <div id="mycolor"></div>
+  <div id="feed"></div>
+  <div id="stats"><div id="hpbar"><i id="hpfill"></i></div><div id="ammo"></div></div>
+  <div id="dead" hidden>Você foi atingido! Voltando em instantes…</div>
+  <button id="fire" aria-label="Atirar">Atirar</button>
+  <button id="rld">Recarregar</button>
+  <button id="quit">Sair</button>
+</section>
+<script src="config.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
